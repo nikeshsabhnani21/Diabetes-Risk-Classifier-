@@ -1,6 +1,4 @@
-# Project Name 
-
-Diabetes Risk Classifier
+# Diabetes Risk Classifier 🏥
 
 ## Project Description 
 
