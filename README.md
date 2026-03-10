@@ -1,6 +1,6 @@
 # Project Name 
 
-Diabetes Risk Prediction
+Diabetes Risk Classifier
 
 ## Project Description 
 
@@ -17,7 +17,7 @@ Pre-processing data, separating or splitting features and results, training the 
 
 ## How does it work?
 
-Health indicator data was used for predicting the binary outcome for diabetes. The data showed a small proportion of the population classified as diabetic actually had the true definition of diabetes. As a result, the classification models were evaluated based on the performance with regard to identifying diabetic patients by looking at the proportion of true asymptomatic diabetic cases identified by each of the three classification models. It was shown that the performance of the Logistic Regression with a class weight was substantially better than the other two classification models with regard to identifying true positives among the minority class compared to the overall accuracy of each model.
+Health indicator data was used for Classifying the binary outcome for diabetes. The data showed a small proportion of the population classified as diabetic actually had the true definition of diabetes. As a result, the classification models were evaluated based on the performance with regard to identifying diabetic patients by looking at the proportion of true asymptomatic diabetic cases identified by each of the three classification models. It was shown that the performance of the Logistic Regression with a class weight was substantially better than the other two classification models with regard to identifying true positives among the minority class compared to the overall accuracy of each model.
 This project also emphasized the importance of model comparison and interpretation, along with the evaluation methods with regard to the performance of the models for ethical decisions in the field of health care.
 
 ## Installation
