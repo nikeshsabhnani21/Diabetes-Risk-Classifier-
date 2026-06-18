@@ -11,7 +11,6 @@ Pre-processing data, separating or splitting features and results, training the 
 - Implementation of ML models (Logistic Regression, Random Forest, Gradient Boosting)
 - Handling class imbalance using class weights
 - Evaluation suing classification (precision, recall, F1-score) report and heatmaps
-- Input validation for deadlines and difficulty levels
 
 ## How does it work?
 
