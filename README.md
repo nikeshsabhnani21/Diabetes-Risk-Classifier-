@@ -10,7 +10,7 @@ Pre-processing data, separating or splitting features and results, training the 
 - Used train-test split for strong evaluation
 - Implementation of ML models (Logistic Regression, Random Forest, Gradient Boosting)
 - Handling class imbalance using class weights
-- Evaluation suing classification (precision, recall, F1-score) report and heatmaps
+- Evaluation using classification (precision, recall, F1-score) report and heatmaps
 
 ## How does it work?
 
