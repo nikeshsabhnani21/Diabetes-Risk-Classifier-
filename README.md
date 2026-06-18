@@ -2,8 +2,7 @@
 
 ## Project Description 
 
-This project employs a supervised algorithmic framework to ascertain possible future occurrence(s) of diabetes mellitus, using only standardized medical data points. The specific goal is to investigate whether or not models would produce medically understandable relationships among variables and how various classification techniques would be able to function while adhering to the real-time boundaries present (e.g., lack of class representation).
-Pre-processing data, separating or splitting features and results, training the model, and conducting a comparative analysis across multiple classifiers were all part of the model development and evaluation process. Developing more precise model metrics than just accuracy for all the classifiers measured was highly prioritised. The low frequencies of diabetic patients in this specific data set emphasised the precision-recall trade-offs for these classifiers.
+A supervised machine learning approach is used to predict the likelihood of future diabetes mellitus occurrence using standardized medical record data. Specifically, the focus of this project will be to determine whether the machine learning algorithms produce medically interpretable relationships between the different variables and how accurately classification methods perform given real-world constraints (i.e., instances where there is not enough representation of diabetics). To evaluate the various models during the development and evaluation phase, the training/testing data was pre-processed, separated into features/results, trained, and compared across models. In addition to classifying diabetic patients, developing better metrics (other than accuracy) for all classifiers who were evaluated was a top priority. Due to the low occurrence of diabetics in this data set (a class imbalance problem), it emphasised the importance of precision/recall trade-offs for the classifiers evaluated.
 
 ## Project Key Features
 
@@ -14,8 +13,7 @@ Pre-processing data, separating or splitting features and results, training the 
 
 ## How does it work?
 
-Health indicator data was used for Classifying the binary outcome for diabetes. The data showed a small proportion of the population classified as diabetic actually had the true definition of diabetes. As a result, the classification models were evaluated based on the performance with regard to identifying diabetic patients by looking at the proportion of true asymptomatic diabetic cases identified by each of the three classification models. It was shown that the performance of the Logistic Regression with a class weight was substantially better than the other two classification models with regard to identifying true positives among the minority class compared to the overall accuracy of each model.
-This project also emphasized the importance of model comparison and interpretation, along with the evaluation methods with regard to the performance of the models for ethical decisions in the field of health care.
+Health indicator data was used to classify individuals as diabetic or non-diabetic. Only a small proportion of the dataset was actually diabetic. Therefore, the models were evaluated on how well they identified true diabetic cases, rather than on overall accuracy using the three different model classification methods. Logistic Regression with class weighting performed substantially better than the other two models at identifying true positives in the minority class, even though it wasn't the most accurate model overall. In addition, this project highlights the importance of model comparison, interpretation, and metric choice when applying machine learning to ethical decisions in healthcare.
 
 ## Installation
 1. Clone the repository
