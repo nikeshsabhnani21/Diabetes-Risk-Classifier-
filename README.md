@@ -1,31 +1,45 @@
-# Diabetes Risk Classifier 
+# Diabetes Risk Classifier
 
-## Project Description 
+Predicts diabetes risk from CDC health survey data (253,680 records), 
+prioritizing recall to catch high-risk cases despite severe class imbalance.
 
-A supervised machine learning approach is used to predict the likelihood of future diabetes mellitus occurrence using standardized medical record data. Specifically, the focus of this project will be to determine whether the machine learning algorithms produce medically interpretable relationships between the different variables and how accurately classification methods perform given real-world constraints (i.e., instances where there is not enough representation of diabetics). To evaluate the various models during the development and evaluation phase, the training/testing data was pre-processed, separated into features/results, trained, and compared across models. In addition to classifying diabetic patients, developing better metrics (other than accuracy) for all classifiers who were evaluated was a top priority. Due to the low occurrence of diabetics in this data set (a class imbalance problem), it emphasised the importance of precision/recall trade-offs for the classifiers evaluated.
+## Overview
 
-## Project Key Features
+Standard accuracy is misleading on imbalanced medical data — a model can 
+score 87% accuracy while catching only 17% of actual diabetic cases. This 
+project benchmarks three classifiers with a focus on recall and 
+interpretability, since missing a true positive (an undiagnosed diabetic) 
+carries far higher real-world cost than a false alarm.
 
-- Used train-test split for strong evaluation
-- Implementation of ML models (Logistic Regression, Random Forest, Gradient Boosting)
-- Handling class imbalance using class weights
-- Evaluation using classification (precision, recall, F1-score) report and heatmaps
+## Results
 
-## How does it work?
+| Model | Accuracy | Diabetes Recall | Diabetes Precision |
+|---|---|---|---|
+| Logistic Regression (weighted) | 73% | **76%** | 31% |
+| Random Forest | 86% | 17% | 48% |
+| Gradient Boosting | 87% | 17% | 57% |
 
-Health indicator data was used to classify individuals as diabetic or non-diabetic. Only a small proportion of the dataset was actually diabetic. Therefore, the models were evaluated on how well they identified true diabetic cases, rather than on overall accuracy using the three different model classification methods. Logistic Regression with class weighting performed substantially better than the other two models at identifying true positives in the minority class, even though it wasn't the most accurate model overall. In addition, this project highlights the importance of model comparison, interpretation, and metric choice when applying machine learning to ethical decisions in healthcare.
+Logistic Regression had the lowest overall accuracy but by far the highest 
+recall on the diabetic class — catching 76% of true diabetic cases versus 
+just 17% for Random Forest and Gradient Boosting. In a healthcare screening 
+context, this tradeoff (more false positives, far fewer missed diagnoses) 
+is the right one.
+
+Top predictive features: **HighBP** (28.7%), **general health** (27.3%), and 
+**BMI** (17.0%), together accounting for ~73% of total model importance.
+
+## Key Techniques
+
+- Class imbalance handling via class weighting
+- Model comparison: Logistic Regression, Random Forest, Gradient Boosting
+- Evaluation beyond accuracy — precision, recall, F1-score, confusion matrices
 
 ## Installation
-1. Clone the repository
-2. Make sure you have Python 3.10 or greater
-3. Install scikit-learn, pandas and matplotlib
-4. Run: python main.py
 
+```bash
+git clone [repo-url]
+pip install scikit-learn pandas matplotlib
+python main.py
+```
 
-
-
-
-
-
-
-
+Requires Python 3.10+.
